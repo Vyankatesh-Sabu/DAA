@@ -10,6 +10,8 @@ void solve(){
         cin>>arr[1][i];
     }
 
+    int timecomplexity =0;
+
     int point[n] = {0};
     for(int i =0; i<n-1; i++){
         for(int j =i+1; j<n; j++){
@@ -21,6 +23,7 @@ void solve(){
             }else if(arr[0][i]>=arr[0][j] && arr[1][i]<=arr[1][j]){
                 point[j]= point[j] + 2;
             }
+            timecomplexity++;
         }
     }
 
@@ -29,6 +32,8 @@ void solve(){
     }
 
     cout<<endl;
+
+    cout<<"time complexity"<<timecomplexity;
 
 
 }
